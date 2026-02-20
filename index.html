@@ -2,11 +2,94 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heegyu Kim</title>
+  <meta name="description" content="Personal website of Heegyu Kim" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <h1>Hello 👋</h1>
-  <p>GitHub Pages로 만든 개인 홈페이지입니다.</p>
+  <div class="page">
+    <!-- HERO: 첫 화면(요청한 구조) -->
+    <header class="hero">
+      <!-- Left: passport photo -->
+      <div class="photo">
+        <img src="assets/passport.jpg" alt="Passport photo" />
+      </div>
+
+      <!-- Right: identity + personal info -->
+      <div class="identity">
+        <h1 class="name">Heegyu Kim, Ph.D.</h1>
+
+        <div class="contact">
+          <a href="mailto:kim0401hg@gist.ac.kr">kim0401hg@gist.ac.kr</a>
+          <span class="sep">·</span>
+          <a href="mailto:kim7hg@gmail.com">kim7hg@gmail.com</a>
+        </div>
+
+        <div class="affiliation">
+          School of Electrical Engineering and Computer Science<br />
+          Gwangju Institute of Science and Technology (GIST)
+        </div>
+
+        <hr class="divider" />
+
+        <section class="personal">
+          <h2>Personal Information</h2>
+
+          <dl class="kv">
+            <div class="row">
+              <dt>Name</dt>
+              <dd>Heegyu Kim</dd>
+            </div>
+            <div class="row">
+              <dt>Citizenship</dt>
+              <dd>South Korea</dd>
+            </div>
+            <div class="row">
+              <dt>Interests</dt>
+              <dd>EEG hyperscanning, inter-brain synchrony, social decision-making</dd>
+            </div>
+            <div class="row">
+              <dt>Links</dt>
+              <dd>
+                <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+                <span class="sep">·</span>
+                <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="sep">·</span>
+                <a href="#" target="_blank" rel="noreferrer">CV (PDF)</a>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </header>
+
+    <!-- 아래는 필요하면 채우는 섹션(심플 유지) -->
+    <main class="content">
+      <section>
+        <h2>About</h2>
+        <p>
+          짧은 자기소개를 여기에 작성하세요. (연구 관심, 현재 소속/역할, 관심 있는 협업 등)
+        </p>
+      </section>
+
+      <section>
+        <h2>Updates</h2>
+        <ul class="list">
+          <li>2026-02: (예) Submitted a manuscript on ...</li>
+          <li>2026-01: (예) Started working on ...</li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Heegyu Kim</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
