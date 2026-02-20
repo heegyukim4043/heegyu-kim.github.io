@@ -1,0 +1,134 @@
+:root{
+  --text:#111;
+  --muted:#555;
+  --line:#e6e6e6;
+  --bg:#fff;
+  --max: 940px;
+}
+
+*{ box-sizing:border-box; }
+html, body{ margin:0; padding:0; }
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  line-height: 1.55;
+}
+
+a{ color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+a:hover{ opacity: .8; }
+
+.page{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 36px 20px 60px;
+}
+
+/* HERO layout: left photo + right info */
+.hero{
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.photo img{
+  width: 170px;
+  height: 210px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.identity .name{
+  margin: 0 0 6px 0;
+  font-size: 34px;
+  letter-spacing: -0.2px;
+}
+
+.contact{
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.sep{
+  margin: 0 8px;
+  color: var(--muted);
+}
+
+.affiliation{
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.divider{
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 14px 0 14px;
+}
+
+.personal h2{
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  letter-spacing: .2px;
+  text-transform: none;
+}
+
+.kv{
+  margin: 0;
+}
+
+.kv .row{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 6px 0;
+}
+
+.kv dt{
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.kv dd{
+  margin: 0;
+}
+
+/* Content sections */
+.content{
+  margin-top: 26px;
+}
+
+.content h2{
+  font-size: 18px;
+  margin: 18px 0 10px;
+}
+
+.list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.footer{
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Responsive: 모바일에서는 사진 위/정보 아래로 */
+@media (max-width: 640px){
+  .hero{
+    grid-template-columns: 1fr;
+  }
+  .photo img{
+    width: 160px;
+    height: 200px;
+  }
+  .kv .row{
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
